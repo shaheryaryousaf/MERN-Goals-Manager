@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #010001;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none !important;
+}
+
+/* Navbar Style */
+.navbar {
+  border-bottom: 1px solid #ececec;
+}
+
+.navbar a {
+  color: #010001;
+}
+
+/* Auth Form */
+.auth_form h2 {
+  font-weight: 400;
+}
+
+.auth_form p {
+  font-size: 16px;
+}
+
+.auth_form .form-control,
+.auth_form .btn {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.auth_form .form-control {
+  border-color: #ececec !important;
+}
+
+.auth_form .card {
+  border-color: #ececec !important;
+  border-radius: 5px;
+}
+
+.auth_form .auth_link{
+    font-size: 14px;
+}
+
+.auth_form .auth_link a{
+    text-decoration: none;
+}
