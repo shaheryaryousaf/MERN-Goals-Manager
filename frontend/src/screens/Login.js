@@ -10,12 +10,33 @@ import Card from "react-bootstrap/Card";
 // Import Link
 import { Link } from "react-router-dom";
 
+import { useSelector, useDispatch } from "react-redux";
+import { login, reset } from "../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
   const { email, password } = formData;
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, isLoading, isSuccess, isError, message } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || user) {
+      navigate("/");
+    }
+    dispatch(reset());
+  }, [user, isSuccess, isError, message]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -26,7 +47,12 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    const userData = {
+      email,
+      password,
+    };
+    dispatch(login(userData));
+    navigate("/");
   };
 
   return (
