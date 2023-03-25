@@ -13,6 +13,22 @@
   outline: none !important;
 }
 
+.form-control{
+  padding: 10px !important;
+  font-size: 15px !important;
+  border-radius: 5px !important;
+}
+
+.btn{
+  padding: 7px !important;
+  font-size: 15px !important;
+  border-radius: 5px !important;
+}
+
+.form-control {
+  border-color: #ececec !important;
+}
+
 /* Navbar Style */
 .navbar {
   border-bottom: 1px solid #ececec;
@@ -31,17 +47,6 @@
   font-size: 16px;
 }
 
-.auth_form .form-control,
-.auth_form .btn {
-  padding: 10px;
-  font-size: 15px;
-  border-radius: 5px;
-}
-
-.auth_form .form-control {
-  border-color: #ececec !important;
-}
-
 .auth_form .card {
   border-color: #ececec !important;
   border-radius: 5px;
@@ -53,4 +58,22 @@
 
 .auth_form .auth_link a{
     text-decoration: none;
+}
+
+/* Goal Item */
+.goal_item{
+  border: 1px solid #ececec;
+  background-color: #f3efef47;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.deleteBtn{
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
 }
