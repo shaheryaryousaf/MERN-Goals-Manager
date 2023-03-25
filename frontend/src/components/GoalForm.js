@@ -27,7 +27,7 @@ const GoalForm = () => {
           placeholder="Enter Text"
         />
       </Form.Group>
-      <Button type="submit" variant="primary">
+      <Button type="submit" className="mb-3 w-100" variant="primary">
         Add Goal
       </Button>
     </Form>

@@ -16,7 +16,7 @@ const App = () => {
     <>
       <Router>
         <Header />
-        <div className="container p-5">
+        <div className="container pt-5">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
